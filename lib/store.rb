@@ -8,7 +8,7 @@ class Store < ActiveRecord::Base
   def must_carry
     # puts "validating #{mens_apparel} and #{womens_apparel}"
     if !mens_apparel && !womens_apparel
-      errors.add(:womens_or_mens_apparel,"Womens and Mens apparel can't both be false")
+      errors.add(name,"Womens and Mens apparel can't both be false")
     end
   end
 end
